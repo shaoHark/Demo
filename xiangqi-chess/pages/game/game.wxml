@@ -1,0 +1,49 @@
+<view class="game-container">
+  <!-- 状态栏 -->
+  <view class="status-bar">
+    <view class="turn-info">
+      <text class="turn-label">当前回合：</text>
+      <text class="turn-value red-text" wx:if="{{turnSide === 1}}">红方（你）</text>
+      <text class="turn-value black-text" wx:if="{{turnSide === -1}}">黑方（AI）</text>
+    </view>
+    <view class="diff-badge">难度：{{difficultyLabel}}</view>
+  </view>
+
+  <!-- 棋盘 Canvas -->
+  <view class="board-wrapper">
+    <canvas
+      type="2d"
+      id="chessCanvas"
+      class="chess-canvas"
+      bindtouchend="onCanvasTap"
+      disable-scroll="true"
+    ></canvas>
+  </view>
+
+  <!-- 提示信息 -->
+  <view class="tip-bar" wx:if="{{tipText}}">
+    {{tipText}}
+  </view>
+
+  <!-- AI 思考中 -->
+  <view class="thinking-bar" wx:if="{{aiThinking}}">
+    <text class="thinking-dot"></text>
+    AI 思考中...
+  </view>
+
+  <!-- 控制按钮 -->
+  <view class="control-area">
+    <view class="control-btn {{undoEnabled ? 'btn-enabled' : 'btn-disabled'}}" bindtap="onUndo">
+      <text class="btn-icon">↩</text>
+      <text class="btn-label">悔棋</text>
+    </view>
+    <view class="control-btn" bindtap="onRestart">
+      <text class="btn-icon">🔄</text>
+      <text class="btn-label">重来</text>
+    </view>
+    <view class="control-btn" bindtap="onExit">
+      <text class="btn-icon">🚪</text>
+      <text class="btn-label">退出</text>
+    </view>
+  </view>
+</view>

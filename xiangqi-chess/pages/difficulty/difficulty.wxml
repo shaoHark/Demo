@@ -1,0 +1,39 @@
+<view class="diff-container">
+  <view class="header">
+    <view class="title">人机对战</view>
+    <view class="subtitle">请选择难度等级</view>
+  </view>
+
+  <!-- 难度选项 -->
+  <view class="diff-list">
+    <view
+      class="diff-item {{selectedIndex === index ? 'diff-item-active' : ''}}"
+      wx:for="{{difficulties}}"
+      wx:key="key"
+      data-index="{{index}}"
+      bindtap="onSelectDifficulty"
+    >
+      <view class="diff-header">
+        <view class="diff-name">{{item.label}}</view>
+        <view class="diff-stars">{{starTexts[index]}}</view>
+      </view>
+      <view class="diff-desc">{{item.desc}}</view>
+      <view wx:if="{{selectedIndex === index}}" class="check-badge">✓</view>
+    </view>
+  </view>
+
+  <!-- 当前选择提示 -->
+  <view class="current-tip">
+    当前选择：{{selectedLabel}}
+  </view>
+
+  <!-- 按钮区 -->
+  <view class="btn-area">
+    <view class="btn btn-secondary" bindtap="goBack">
+      返回
+    </view>
+    <view class="btn btn-primary" bindtap="goToGame">
+      开始对局
+    </view>
+  </view>
+</view>

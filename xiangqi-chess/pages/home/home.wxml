@@ -1,0 +1,32 @@
+<view class="home-container">
+  <!-- 标题区域 -->
+  <view class="header">
+    <view class="title">{{title}}</view>
+    <view class="subtitle">{{subtitle}}</view>
+  </view>
+
+  <!-- 棋盘装饰 -->
+  <view class="board-deco">
+    <view class="board-frame">
+      <view class="board-inner">
+        <view class="river">楚 河 —— 汉 界</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 功能卡片 -->
+  <view class="features">
+    <view class="feature-item" wx:for="{{features}}" wx:key="name">
+      <text class="feature-icon">{{item.icon}}</text>
+      <text class="feature-name">{{item.name}}</text>
+      <text class="feature-desc">{{item.desc}}</text>
+    </view>
+  </view>
+
+  <!-- 开始按钮 -->
+  <view class="btn-start" bindtap="goToModeSelect">
+    <text class="btn-text">开始游戏</text>
+  </view>
+
+  <view class="version">v1.0.0</view>
+</view>

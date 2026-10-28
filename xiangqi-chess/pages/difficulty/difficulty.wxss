@@ -1,0 +1,130 @@
+.diff-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 40rpx;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #8B4513 0%, #654321 60%, #2F1810 100%);
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+
+.title {
+  font-size: 56rpx;
+  font-weight: bold;
+  color: #FFD700;
+  letter-spacing: 8rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #DEB887;
+  margin-top: 12rpx;
+}
+
+.diff-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+  margin-bottom: 40rpx;
+}
+
+.diff-item {
+  position: relative;
+  background: rgba(255,255,255,0.08);
+  border: 3rpx solid rgba(255,255,255,0.2);
+  border-radius: 20rpx;
+  padding: 32rpx;
+  transition: all 0.2s;
+}
+
+.diff-item-active {
+  background: rgba(212, 160, 23, 0.2);
+  border: 3rpx solid #FFD700;
+  box-shadow: 0 4rpx 20rpx rgba(255, 215, 0, 0.3);
+}
+
+.diff-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.diff-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.diff-stars {
+  font-size: 32rpx;
+}
+
+.diff-desc {
+  font-size: 24rpx;
+  color: #DEB887;
+}
+
+.check-badge {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background: #FFD700;
+  color: #2F1810;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.current-tip {
+  font-size: 26rpx;
+  color: #DEB887;
+  margin-bottom: 50rpx;
+}
+
+.btn-area {
+  display: flex;
+  gap: 30rpx;
+  width: 100%;
+}
+
+.btn {
+  flex: 1;
+  height: 88rpx;
+  border-radius: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  letter-spacing: 4rpx;
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.15);
+  color: #DEB887;
+  border: 2rpx solid rgba(255,255,255,0.3);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #D4A017 0%, #8B6914 100%);
+  color: #2F1810;
+  border: 3rpx solid #FFD700;
+  box-shadow: 0 6rpx 16rpx rgba(0,0,0,0.4);
+}
+
+.btn:active {
+  transform: scale(0.96);
+  opacity: 0.9;
+}
